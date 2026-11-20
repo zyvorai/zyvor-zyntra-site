@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Zyntra · Zyvor</title><meta name="description" content="Live eBPF, GPU and host signals become ranked, explainable, human-approved actions. Sense. Simulate. Act."><meta name="color-scheme" content="dark"><meta name="theme-color" content="#000000">
+<meta property="og:type" content="website"><meta property="og:title" content="Zyntra · Zyvor"><meta property="og:description" content="Live eBPF, GPU and host signals become ranked, explainable, human-approved actions. Sense. Simulate. Act."><meta property="og:url" content="https://zyvorai.github.io/zyvor-zyntra-site/">
+<meta name="twitter:card" content="summary"><link rel="icon" href="favicon.svg" type="image/svg+xml"><style>
+:root{color-scheme:dark;--bg:#000;--s1:#1d1d1f;--s2:#161617;--t1:#f5f5f7;--t2:#a1a1a6;--t3:#86868b;--blue:#2997ff;--blue2:#0071e3;--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--t1);font:17px/1.47 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+nav{position:sticky;top:0;z-index:10;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 max(22px,calc((100% - 980px)/2));background:rgba(22,22,23,.8);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line);font-size:12px}
+nav .brand{font-weight:600;font-size:17px;color:var(--t1)}nav .links{display:flex;gap:28px}nav .links a{color:var(--t2)}nav .links a:hover{color:var(--t1);text-decoration:none}
+.hero{position:relative;text-align:center;padding:96px 22px 72px;overflow:hidden}
+.hero:before{content:"";position:absolute;left:50%;top:-220px;width:1100px;height:700px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(41,151,255,.22),rgba(41,151,255,.06) 55%,transparent 75%);pointer-events:none}
+.eyebrow{position:relative;font-size:21px;font-weight:600;color:var(--t2);margin:0 0 12px;letter-spacing:.01em}
+h1{position:relative;text-wrap:balance;font-size:clamp(44px,7.4vw,88px);line-height:1.03;letter-spacing:-.03em;font-weight:700;margin:0 auto 22px;max-width:980px;background:linear-gradient(180deg,#fff 30%,#86868b 120%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{position:relative;font-size:clamp(19px,2.4vw,28px);line-height:1.2;color:var(--t2);max-width:760px;margin:0 auto 34px;font-weight:400;letter-spacing:.004em}
+.cta{position:relative;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;border-radius:980px;padding:12px 24px;font-size:17px;line-height:1.2;background:var(--blue2);color:#fff;transition:background .2s}.btn:hover{background:#0077ed;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--blue);border:1px solid var(--blue)}.btn.ghost:hover{background:rgba(41,151,255,.12)}
+.term{position:relative;max-width:760px;margin:64px auto 0;text-align:left;background:linear-gradient(180deg,#1d1d1f,#111113);border:1px solid var(--line);border-radius:16px;box-shadow:0 40px 120px rgba(41,151,255,.12),0 10px 40px rgba(0,0,0,.6);overflow:hidden}
+.term .bar{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.03)}
+.term .bar i{width:12px;height:12px;border-radius:50%;display:block}.term .bar i:nth-child(1){background:#ff5f57}.term .bar i:nth-child(2){background:#febc2e}.term .bar i:nth-child(3){background:#28c840}
+.term .bar span{margin-left:10px;color:var(--t3);font-size:12px}
+.term pre{margin:0;padding:22px 24px;font:14.5px/1.7 ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;color:var(--t1);overflow:auto}.term .p{color:var(--blue)}.term .c{color:var(--t3)}
+section{padding:96px 22px;max-width:1080px;margin:0 auto}
+h2{font-size:clamp(34px,5vw,56px);line-height:1.07;letter-spacing:-.025em;font-weight:700;margin:0 0 14px;text-align:center}
+.lead{font-size:clamp(18px,2.2vw,24px);line-height:1.3;color:var(--t2);text-align:center;max-width:720px;margin:0 auto 56px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:var(--s1);border:1px solid var(--line);border-radius:22px;padding:30px 28px;transition:transform .3s,border-color .3s}.card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.2)}
+.card h3{font-size:24px;line-height:1.15;letter-spacing:-.01em;margin:0 0 10px}.card p{margin:0;color:var(--t2);font-size:17px}
+.run{display:grid;gap:16px;max-width:760px;margin:0 auto}
+.cmd{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--s1);border:1px solid var(--line);border-radius:16px;padding:16px 20px}
+.cmd div{min-width:0}.cmd small{display:block;color:var(--t3);font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}.cmd code{font:14.5px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--t1);word-break:break-all}
+button.copy{flex:none;cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--blue);border-radius:980px;padding:7px 16px;font:14px -apple-system,sans-serif}button.copy:hover{background:rgba(41,151,255,.12)}
+.dl{display:grid;gap:16px;max-width:760px;margin:0 auto}
+.file{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:var(--s1);border:1px solid var(--line);border-radius:22px;padding:22px 26px}
+.file h3{margin:0;font-size:21px}.file p{margin:2px 0 0;color:var(--t3);font-size:14px}.file code{display:block;margin-top:8px;color:var(--t3);font:12px ui-monospace,Menlo,monospace;word-break:break-all}
+.license{background:linear-gradient(180deg,#0d0d0e,#000);border:1px solid var(--line);border-radius:28px;padding:56px 28px;text-align:center;max-width:900px;margin:0 auto}
+.license p{max-width:640px;margin:0 auto 28px;color:var(--t2);font-size:19px}
+footer{border-top:1px solid var(--line);padding:28px 22px 44px;color:var(--t3);font-size:12px;text-align:center}footer a{color:var(--t2)}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.card{transition:none}}
+@media (max-width:640px){nav .links a:not(.keep){display:none}section{padding:64px 20px}.hero{padding-top:64px}}
+</style><script>document.documentElement.classList.add("js")</script></head><body>
+<nav><span class="brand">Zyntra</span><span class="links"><a href="#features">Overview</a><a href="#run">Run</a><a href="#download">Download</a><a class="keep" href="#license">Buy</a></span></nav>
+<header class="hero"><p class="eyebrow">Decision intelligence</p><h1>Know the next best action.<br>And why.</h1><p class="sub">Live eBPF, GPU and host signals become ranked, explainable, human-approved actions. Sense. Simulate. Act.</p>
+<div class="cta"><a class="btn" href="https://zyvor.dev/buy">Buy a license</a><a class="btn ghost" href="#run">Run it</a></div>
+<div class="term" aria-hidden="true"><div class="bar"><i></i><i></i><i></i><span>Terminal</span></div><pre><span class="c"># Container</span>
+<span class="p">$</span> docker pull ghcr.io/zyvorai/zyntra:0.5.0
+<span class="c"># Helm chart</span>
+<span class="p">$</span> helm pull oci://ghcr.io/zyvorai/charts/zyntra</pre></div></header>
+<section id="features"><h2 class="rv">Everything you need.</h2><p class="lead rv">Zyntra at a glance.</p><div class="grid"><div class="card rv"><h3>Sense</h3><p>A live KPI graph built from eBPF, GPU and host signals, with read-only sources.</p></div><div class="card rv"><h3>Simulate</h3><p>Explainable what-if simulation before anything changes.</p></div><div class="card rv"><h3>Act</h3><p>Ranked actions with human approval on every change, dry-run by default.</p></div><div class="card rv"><h3>Prove</h3><p>Signed decision records for every approved action.</p></div><div class="card rv"><h3>One binary</h3><p>A single Go binary, plus a native Mac app.</p></div><div class="card rv"><h3>Your cluster</h3><p>Runs from a container image or a Helm chart, on your infrastructure.</p></div></div></section>
+<section id="run"><h2 class="rv">Run it anywhere.</h2><p class="lead rv">Published on GitHub Container Registry.</p><div class="run"><div class="cmd rv"><div><small>Container</small><code>docker pull ghcr.io/zyvorai/zyntra:0.5.0</code></div><button class="copy" data-copy="docker pull ghcr.io/zyvorai/zyntra:0.5.0">Copy</button></div><div class="cmd rv"><div><small>Helm chart</small><code>helm pull oci://ghcr.io/zyvorai/charts/zyntra</code></div><button class="copy" data-copy="helm pull oci://ghcr.io/zyvorai/charts/zyntra">Copy</button></div></div></section>
+<section id="download"><h2 class="rv">Download.</h2><p class="lead rv">Release binaries, with checksums so you can verify them.</p><div class="dl"><div class="file rv"><div><h3>Zyntra for macOS</h3><p>Version 0.5.1 · 9 MB · Zyntra-0.5.1.dmg</p><code>SHA-256 e389fca1ca1362e9779b2823ef597b7a5ec174f278de0955854229fff752bc05</code></div><a class="btn" href="https://github.com/zyvorai/zyvor-zyntra-site/releases/download/mac-v0.5.1/Zyntra-0.5.1.dmg">Download</a></div></div></section>
+<section id="license"><div class="license rv"><h2>One license. Every deployment.</h2><p>Zyntra is licensed software from Zyvor AI Labs. A commercial license is required to run it. A 30-day trial key is available so you can evaluate it first.</p>
+<div class="cta"><a class="btn" href="https://zyvor.dev/buy">Buy a license</a><a class="btn ghost" href="mailto:sales@zyvor.dev?subject=Zyntra%20license">Contact sales</a></div></div></section>
+<footer>© 2026 Zyvor AI Labs Private Limited · <a href="https://zyvor.dev">zyvor.dev</a> · <a href="mailto:sales@zyvor.dev">sales@zyvor.dev</a> · <a href="LICENSE">Zyvor Production License v1.0</a></footer>
+<script>document.documentElement.classList.add('js');document.querySelectorAll('button.copy').forEach(function(b){b.addEventListener('click',function(){var t=b.getAttribute('data-copy');(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1400)}).catch(function(){})})});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});</script></body></html>
