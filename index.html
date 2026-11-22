@@ -40,19 +40,35 @@ footer{border-top:1px solid var(--line);padding:28px 22px 44px;color:var(--t3);f
 .js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}.js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.card{transition:none}}
 @media (max-width:640px){nav .links a:not(.keep){display:none}section{padding:64px 20px}.hero{padding-top:64px}}
-</style><script>document.documentElement.classList.add("js")</script></head><body>
-<nav><span class="brand">Zyntra</span><span class="links"><a href="#features">Overview</a><a href="#run">Run</a><a href="#download">Download</a><a class="keep" href="#license">Buy</a></span></nav>
+</style><link rel="stylesheet" href="assets/zyvor-buyer.css"><script>document.documentElement.classList.add("js")</script></head><body>
+<nav><span class="brand">Zyntra</span><span class="links"><a href="#features">Overview</a><a href="#run">Run</a><a href="#download">Download</a><a class="keep" href="#pricing">Buy</a></span></nav>
 <header class="hero"><p class="eyebrow">Decision intelligence</p><h1>Know the next best action.<br>And why.</h1><p class="sub">Live eBPF, GPU and host signals become ranked, explainable, human-approved actions. Sense. Simulate. Act.</p>
-<div class="cta"><a class="btn" href="https://zyvor.dev/buy">Buy a license</a><a class="btn ghost" href="#run">Run it</a></div>
+<div class="buyer" role="group" aria-label="Get Zyntra">
+  <div class="actions">
+    <a class="btn primary" href="https://github.com/zyvorai/zyvor-zyntra-site/releases/download/mac-v0.5.1/Zyntra-0.5.1.dmg">Download Zyntra 0.5.1 for Mac</a>
+    <a class="btn ghost" href="https://zyvor.dev/contact?intent=trial&amp;product=zyntra" rel="noopener">Ask for a 30-day trial</a>
+    <a class="btn ghost" href="https://zyvor.dev/buy" rel="noopener">Buy a license</a>
+  </div>
+  <p class="sub">Zyntra-0.5.1.dmg · 9 MB · <a href="https://zyvor.dev/pricing" rel="noopener">See current prices</a></p>
+  <p class="trust"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span><strong>Verified by Apple:</strong> Developer ID signed and notarized. This covers the Mac download, Zyntra-0.5.1.dmg, which is signed, notarized by Apple and stapled. The container image and Helm chart are not part of this notarization.</span></p>
+  <ul class="reqs"><li>Mac app for macOS 14 or later. Free for evaluation and non-production use under the Zyvor Production License; production use needs a commercial license.</li><li>This download is the Zyntra desktop app. To run Zyntra on your cluster, use the <a href="#run">container image or Helm chart</a>.</li></ul>
+</div>
 <div class="term" aria-hidden="true"><div class="bar"><i></i><i></i><i></i><span>Terminal</span></div><pre><span class="c"># Container</span>
 <span class="p">$</span> docker pull ghcr.io/zyvorai/zyntra:0.5.0
 <span class="c"># Helm chart</span>
 <span class="p">$</span> helm pull oci://ghcr.io/zyvorai/charts/zyntra</pre></div></header>
+<section class="outcomes" aria-labelledby="outcomes-h">
+  <h2 id="outcomes-h">What you get.</h2>
+  <ul class="tiles"><li class="tile"><h3>See why before you act</h3><p>Explainable what-if simulation shows what would happen before anything changes.</p></li><li class="tile"><h3>Stay in control</h3><p>Ranked actions with human approval on every change, dry-run by default.</p></li><li class="tile"><h3>Keep a record you can prove</h3><p>Signed decision records are kept for every approved action.</p></li></ul>
+</section>
 <section id="features"><h2 class="rv">Everything you need.</h2><p class="lead rv">Zyntra at a glance.</p><div class="grid"><div class="card rv"><h3>Sense</h3><p>A live KPI graph built from eBPF, GPU and host signals, with read-only sources.</p></div><div class="card rv"><h3>Simulate</h3><p>Explainable what-if simulation before anything changes.</p></div><div class="card rv"><h3>Act</h3><p>Ranked actions with human approval on every change, dry-run by default.</p></div><div class="card rv"><h3>Prove</h3><p>Signed decision records for every approved action.</p></div><div class="card rv"><h3>One binary</h3><p>A single Go binary, plus a native Mac app.</p></div><div class="card rv"><h3>Your cluster</h3><p>Runs from a container image or a Helm chart, on your infrastructure.</p></div></div></section>
 <section id="run"><h2 class="rv">Run it anywhere.</h2><p class="lead rv">Published on GitHub Container Registry.</p><div class="run"><div class="cmd rv"><div><small>Container</small><code>docker pull ghcr.io/zyvorai/zyntra:0.5.0</code></div><button class="copy" data-copy="docker pull ghcr.io/zyvorai/zyntra:0.5.0">Copy</button></div><div class="cmd rv"><div><small>Helm chart</small><code>helm pull oci://ghcr.io/zyvorai/charts/zyntra</code></div><button class="copy" data-copy="helm pull oci://ghcr.io/zyvorai/charts/zyntra">Copy</button></div></div></section>
 <section id="download"><h2 class="rv">Download.</h2><p class="lead rv">Release binaries, with checksums so you can verify them.</p><div class="dl"><div class="file rv"><div><h3>Zyntra for macOS</h3><p>Version 0.5.1 · 9 MB · Zyntra-0.5.1.dmg</p><code>SHA-256 e389fca1ca1362e9779b2823ef597b7a5ec174f278de0955854229fff752bc05</code></div><a class="btn" href="https://github.com/zyvorai/zyvor-zyntra-site/releases/download/mac-v0.5.1/Zyntra-0.5.1.dmg">Download</a></div></div></section>
-<section id="license"><div class="license rv"><h2>One license. Every deployment.</h2><p>Zyntra is licensed software from Zyvor AI Labs. A commercial license is required to run it. A 30-day trial key is available so you can evaluate it first.</p>
-<div class="cta"><a class="btn" href="https://zyvor.dev/buy">Buy a license</a><a class="btn ghost" href="mailto:sales@zyvor.dev?subject=Zyntra%20license">Contact sales</a></div></div></section>
-<footer>© 2026 Zyvor AI Labs Private Limited · <a href="https://zyvor.dev">zyvor.dev</a> · <a href="mailto:sales@zyvor.dev">sales@zyvor.dev</a> · <a href="LICENSE">Zyvor Production License v1.0</a></footer>
+<section class="buy-pointer" id="pricing" aria-labelledby="pricing-h">
+  <h2 id="pricing-h">Prices and licenses</h2>
+  <p>Current prices, in your currency where available, are on zyvor.dev. Zyntra is free for evaluation and non-production use under the Zyvor Production License. Production use needs a commercial license, and you can ask for a 30-day trial first.</p>
+  <p class="cta"><a class="btn primary" href="https://zyvor.dev/buy" rel="noopener">Buy a license</a><a class="btn ghost" href="https://zyvor.dev/contact?intent=trial&amp;product=zyntra" rel="noopener">Ask for a 30-day trial</a><a class="textlink" href="https://zyvor.dev/pricing" rel="noopener">See current prices</a></p>
+</section>
+<footer class="footer-links">© 2026 Zyvor AI Labs Private Limited · <a href="https://zyvor.dev">zyvor.dev</a> · <a href="https://zyvor.dev/pricing">Prices</a> · <a href="LICENSE">Zyvor Production License v1.0</a> · <a href="mailto:sales@zyvor.dev">Support and sales: sales@zyvor.dev</a></footer>
 <script>document.documentElement.classList.add('js');document.querySelectorAll('button.copy').forEach(function(b){b.addEventListener('click',function(){var t=b.getAttribute('data-copy');(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1400)}).catch(function(){})})});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});</script></body></html>
